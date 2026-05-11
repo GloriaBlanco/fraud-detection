@@ -1,4 +1,4 @@
-### Projeto Detecção de Fraude - Classificação
+## Projeto Detecção de Fraude - Classificação
 Este projeto usa Machine Learning para identificar transações fraudulentas. 
 O foco principal é equilibrar a detecção de fraude (Recall) com uma boa experiência para o cliente (Precision).
 Objetivo é analisar as transações: valor, hora, local e classificar: 
@@ -12,7 +12,7 @@ O arquvio base foi o creditcard.csv do site do Kaggle
 
 ---
 
-#### 🛠️ 1. Metodologia e Ferramentas
+### 🛠️ 1. Metodologia e Ferramentas
 
 * **Modelo Supervisionado de Classificação**
 Realizei um teste comparativo entre os 2 algoritmos Random Forest e Logistic Regression.
@@ -29,7 +29,7 @@ O modelo **Random Forest** teve o melhor desempenho.
 
 ---
 
-#### 📈 2. Fluxo do Projeto
+### 📈 2. Fluxo do Projeto
 
 a. **Coleta:** Download do dataset original no Kaggle creditcard.csv.
 b. **Ajuste de Escala:** Diminui o dataset para reduzir o tamanho, com o original não foi possível fazer download no GitHub, nome = creditcard_reduzido10mil.csv.
@@ -55,7 +55,7 @@ Para chegar ao modelo ideal, testei o comportamento do algoritmo **Random Forest
 
 ---
 
-#### 📊 3. Avaliação: Ver a precisão do modelo -- Acurácia /Accuracy
+### 📊 3. Avaliação: Ver a precisão do modelo -- Acurácia /Accuracy
 
 O passo crucial é entender como medir se o seu modelo é realmente bom não podemos apenas olhar para **acurácia**
 Em problemas de classificação, **não basta olhar apenas para a "acurácia"** que é a porcentagem de acertos totais.
@@ -82,7 +82,7 @@ Ela divide os resultados em quatro quadrantes:
 * **F1-Score:** Equilíbrio entre Precisão e Recall. É a melhor métrica para este projeto. É a média harmônica.
 
 ---
-#### 🔍 4. O que observar no resultado
+### 🔍 4. O que observar no resultado
 
 * **Quadrante "Fraude x Fraude" (Recall):** Se houver muitos casos onde era Fraude mas o modelo previu Legítimo (Falso Negativo), a Empresa perde dinheiro.
 * **Quadrante "Legítimo x Fraude" Falso Positivo:** Se esse número for alto, bloqueia clientes bons e gera reclamações.
@@ -90,7 +90,7 @@ Ela divide os resultados em quatro quadrantes:
 A resposta nao será de  "sim" ou "não". 
 Várias métricas coom uma visão analítica completa da "inteligência" do modelo.
 
-#### 🎯 5. Tenho três tipos de respostas do modelo
+### 🎯 5. Tenho três tipos de respostas do modelo
 
 1º. **Resposta Visual = Matriz de Confusão:** Gráfico de calor (heatmap).
    Mostra onde o modelo acertou e onde ele se confundiu
@@ -112,7 +112,7 @@ Com respostas de Precision, Recall e F1-Score
 
 ---
 
-#### 📝 6. Resumo Final
+### 📝 6. Resumo Final
 
 Se o  **Recall for de 0.95**, tenho a satisfação de saber que o modelo  pegará 95% das fraudes. 
 Mas se sua **Precisão for de 0.30**, você verá que está bloqueando muita gente inocente e precisaria ajustar o modelo.
