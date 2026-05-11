@@ -114,7 +114,16 @@ Com respostas de Precision, Recall e F1-Score
 
 ### 📝 6. Resumo Final
 
-Se o  **Recall for de 0.95**, tenho a satisfação de saber que o modelo  pegará 95% das fraudes. 
-Mas se sua **Precisão for de 0.30**, você verá que está bloqueando muita gente inocente e precisaria ajustar o modelo.
-**Conclusão sobre o Modelo:**
-O Random Forest mostrou-se excelente e "conservador",  ele prefere deixar passar uma suspeita do que bloquear o cartão de um cliente honesto sem necessidade, mas com o ajuste para o **Cenário 3**, conseguimos um Recall de 0,95 =  95% de tentativas de fraudes capturadas.
+O modelo Random Forest demonstrou um desempenho sólido e consistente. No Cenário 3, consegui um resultado técnico muito próximo ao do arquivo completo (284 mil linhas), mas processando apenas 10 mil registros.
+
+Resultados do Cenário 3:
+Recall = 80,61%: O modelo identificou corretamente 79 das 98 fraudes presentes no teste.
+
+Precisão Elevada: O modelo cometeu apenas 1 erro ao classificar uma transação legítima (era OK e ele disse ser fraude), mantendo a experiência do cliente protegida.
+
+Insight da V14: A estratégia de amostragem permitiu identificar que a variável V14 é o indicador mais forte de comportamento fraudulento neste conjunto de dados.
+
+##### Conclusão:
+O modelo é conservador e eficiente. 
+Ele prioriza a precisão para não bloquear clientes honestos sem necessidade, enquanto mantém uma taxa de captura de fraude superior a 80%. 
+O meu experimento prova que a qualidade da amostragem  de manter todos os casos de fraude é mais importante do que o volume total de dados.
