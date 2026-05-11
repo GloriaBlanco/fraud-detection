@@ -1,6 +1,6 @@
 ## Projeto Detecção de Fraude - Classificação
 Este projeto usa Machine Learning para identificar transações fraudulentas. 
-O foco principal é equilibrar a detecção de criminosos (Recall) com uma boa experiência para o cliente (Precision).
+O foco principal é equilibrar a detecção de fraude (Recall) com uma boa experiência para o cliente (Precision).
 Objetivo é analisar as transações: valor, hora, local e classificar: 
 **Isso é Legítimo/não fraude** 
 ou
@@ -20,7 +20,7 @@ O modelo **Random Forest** teve o melhor desempenho.
 * **Random Forest:** Utilizado para lidar com a complexidade e evitar pequenos erros do modelo.
     Como usei o RandomForestClassifier, o modelo "sabe" quais colunas foram mais importantes para decidir se era fraude ou não. 
     Isso ajuda a entender o modelo.
-    * **Matriz de Confusão:** Essencial para saber se o modelo está errando mais o "falso positivo" (bloquear um cliente honesto) ou o "falso negativo" (deixar passar um bandido). Aqui diz **onde** o modelo errou.
+    * **Matriz de Confusão:** Essencial para saber se o modelo está errando mais o "falso positivo" (bloquear um cliente honesto) ou o "falso negativo" = não detectar a fraude. Aqui diz **onde** o modelo errou.
     * **Features/Gráfico de Importância:** Diz o **porquê**. Se a variável **V14** está no topo, sabemos que o comportamento dela é o maior **"dedo-duro"** da fraude. O modelo identifica quais colunas foram mais importantes para a decisão.
     * **Curva Precision-Recall:** O melhor gráfico para dados desbalanceados. Diz a estabilidade; se a linha cair muito rápido, o modelo é instável para casos raros.
     * **Visualização de uma Árvore:** O Random Forest cria várias árvores. Analisei a primeira/index 0 para entender a lógica e as perguntas que o modelo faz tipo "O valor da compra é > X?"  Se sim, vá para a esquerda...".
@@ -31,9 +31,9 @@ O modelo **Random Forest** teve o melhor desempenho.
 
 ## 📈 2. Fluxo do Projeto
 
-a. **Coleta:** Download do dataset no Kaggle creditcard.csv.
-b. **Ajuste de Escala:** Diminui o dataset para reduzir o tamanho, com o original não foi possível fazer download no GitHub, nome = credit card_reduzido10mil.csv.
-Observo que eu fiz análise tanto no dataset original quanto neste reduzido e obtive resultados diferentes.
+a. **Coleta:** Download do dataset original no Kaggle creditcard.csv.
+b. **Ajuste de Escala:** Diminui o dataset para reduzir o tamanho, com o original não foi possível fazer download no GitHub, nome = creditcard_reduzido10mil.csv.
+Observação: eu fiz análise tanto no dataset original quanto neste reduzido e obtive resultados diferentes.
 c. **Limpeza:** Remover dados nulos e normalizar valores, exemplo: transformar R$1,00 e R$10.000,00 para uma escala entre 0 e 1.
 d. **Divisão:** Separar 80% dos dados para treino e 20% para modelo testar e ver se aprendeu.
 e. **Treino:**  comando `fit` para treinar o modelo.
@@ -84,9 +84,9 @@ Ela divide os resultados em quatro quadrantes:
 ---
 ## 🔍 4. O que observar no resultado
 
-* **Quadrante "Fraude x Fraude" (Recall):** Se houver muitos casos onde era Fraude mas o modelo previu Legítimo (Falso Negativo), o banco perde dinheiro.
+* **Quadrante "Fraude x Fraude" (Recall):** Se houver muitos casos onde era Fraude mas o modelo previu Legítimo (Falso Negativo), a Empresa perde dinheiro.
 * **Quadrante "Legítimo x Fraude" Falso Positivo:** Se esse número for alto, bloqueia clientes bons e gera reclamações.
-* **Métrica F1-Score:** Como as fraudes são poucas (dados desbalanceados), esta métrica resume se o modelo está equilibrado.
+* **Métrica F1-Score:** Como as fraudes são poucas, ou seja, dados desbalanceados, esta métrica resume se o modelo está equilibrado.
 A resposta nao será de  "sim" ou "não". 
 Várias métricas coom uma visão analítica completa da "inteligência" do modelo.
 
@@ -95,19 +95,20 @@ Várias métricas coom uma visão analítica completa da "inteligência" do mode
 1º. **Resposta Visual = Matriz de Confusão:** Gráfico de calor (heatmap).
    Mostra onde o modelo acertou e onde ele se confundiu
    * *Eixo Vertical:* Realidade / *Eixo Horizontal:* Previsão.
-   * Canto superior esquerdo: Clientes honestos SUCESSO=CORRETOS.
-   * Canto inferior direito: Criminosos capturados SUCESSO=CORRETOS.
-   * Canto inferior esquerdo (**O Perigo**): Fraudes que passaram como normais. ERRO=PREJUIZOS
-   * Canto superior direito: Bloqueios indevidos eram compras normais. ERRO=PREJUIZOS.
+   * Canto superior esquerdo: SUCESSO=CORRETOS - Legítimo/Não fraude (clientes honestos).
+   * Canto inferior direito: SUCESSO=CORRETOS -  Fraude (capturados).
+   * Canto inferior esquerdo (**O Perigo**): ERRO=PREJUIZOS - Fraudes (que passaram como normais).
+   * Canto superior direito: RRO=PREJUIZOS - Não Fraude (bloqueio indevido eram compras normais).
 
-2º. **Resposta Estatística (Relatório de Classificação):** Tabela de 0 a 1 (0% a 100%). Com respostas de Precision, Recall e F1-Score
+2º. **Resposta Estatística (Relatório de Classificação):** Tabela de 0 a 1 (0% a 100%). 
+Com respostas de Precision, Recall e F1-Score
    * **Precision:** Chance de acerto ao dizer que é fraude.
    * **Recall:** Porcentagem de fraudes totais capturadas.
    * **F1-Score:** "Nota final" do modelo. Se o valor estiver baixo, o modelo precisa de mais treino ou dados melhores.
 
 3º. **Resposta Prática (Predição Individual):** Teste com dados novos, é uma simulação em tempo real. Resposta 0 ou 1
-   * `[0]`: Transação Legítima.
-   * `[1]`: Transação Suspeita/Fraude.
+   * `[0]`: transação legítima=Não Fraude.
+   * `[1]`: transação Fraude.
 
 ---
 

@@ -1,7 +1,7 @@
 ### 🕵️ Análise: Arquivo `creditcard_reduzido10milfraudes.csv`
 
 O objetivo deste Projeto foi verificar qual modelo é o melhor para detectar fraude em uma compra de cartão de crédito.
-* **0** = OK (Não fraude)
+* **0** = OK=Legítimo=Não fraude
 * **1** = Fraude
 
 #### 🧪 Meus Testes com o Random Forest
@@ -17,7 +17,7 @@ Eu testei o modelo Random Forest com 3 tipos de dados/arquivos para ver a difere
 **Conclusão dos arquivos:** No 3º arquivo, a proporção é diferente do original. 
 Criei o modelo Random Forest com 80% para treino e 20% para teste nos três arquivos para ver a diferença de aprendizado.
 
-##### 📊 1º Arquivo original T
+##### 📊 1º Arquivo original
 Total de 284.807 reegistros/dados, sendo 284.315=0=99.8272%=OKnaofraude e 492=1=1.01728%=fraude
 
 | Classe | Precision | Recall | F1-Score | Support |
@@ -87,11 +87,14 @@ Esta tabela compara o desempenho do modelo Random Forest nos três cenários de 
 
 #### 📊 Resultado das métricas ---------------------------------------
 
-* **Precision /Precisão:** De todas as vezes que o modelo disse é "Fraude", ele acertou. Serve para evitar o **Falso Positivo** que é bloquear um cliente honesto.
+* **Precision /Precisão:** De todas as vezes que o modelo disse é "Fraude", ele acertou. 
+Serve para evitar o **Falso Positivo** que é bloquear um cliente honesto.
 * **Recall /Revocação:** De todas as fraudes que realmente aconteceram, quantas o modelo conseguiu pegar? 
     * **Observação:** O desafio é equilibrar o Recall com a Precision para não bloquear **Não freaud** clientes inocentes .
-* **F1-Score:** É a média harmônica entre a Precisão e o Recall. Como os dois estão altos, o F1 é bom. Serve para comparar com outros modelos no futuro.
-* **Acurácia:** Aqui está o maior perigo para quem estuda ML. O seu modelo pode dizer que tem 100% de acurácia, mas você nunca deve usar apenas ela. Olhe sempre para o Recall.
+* **F1-Score:** É a média harmônica entre a Precisão e o Recall. Como os dois estão altos, o F1 é bom. 
+Serve para comparar com outros modelos no futuro.
+* **Acurácia:** Aqui está o maior perigo do modelo, tem 100% de acurácia, mas você nunca deve usar apenas ela. 
+Olhe sempre para o Recall.
 
 ---
 
