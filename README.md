@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="imagens/imagem.gif" alt="Fraud Detection" width="100%">
+</p>
+
+# 🛡️ Fraud Detection in Credit Cards | Detecção de Fraude
 ## Projeto Detecção de Fraude - Classificação
 Este projeto usa Machine Learning para identificar transações fraudulentas..  
 O foco principal é equilibrar a detecção de fraude (Recall) com uma boa experiência para o cliente (Precision)..  
@@ -46,7 +51,7 @@ Para chegar ao modelo ideal, testei o comportamento do algoritmo **Random Forest
 * **Cenário 1 = dataset Original:** 284.807 registros (apenas 0,17% são fraudes). O desbalanceamento extremo mascara a realidade através da acurácia.
 * **Cenário 2 = redução proporcional :** 10.000 registros, mantendo a proporção original que eram apenas **17 casos de fraudes**..  
   O modelo não teve dados suficientes para aprender o padrão.
-* **Cenário 3 = redução estratégica :** 10.000 registros, mas mantendo todos os **492 casos de fraude** originais..  
+* **Cenário 3 = redução estratégica Data Sampling :** 10.000 registros, mas mantendo todos os **492 casos de fraude** originais..  
   O usei Random Undersampling, reduzi os dados em 96%, mantendo todos os 492 casos de fraude. A proporção subiu para **4,92%**.
 
 | Cenário | Descrição | Resultado |
@@ -55,7 +60,7 @@ Para chegar ao modelo ideal, testei o comportamento do algoritmo **Random Forest
 | **2. Proporcional** | 10.000 registros (17 fraudes) | Dados insuficientes para o aprendizado. |
 | **3. Estratégico** | 10.000 registros (**492 fraudes**) | **V14 revelada como indicador crítico.** Equilíbrio ideal. |
 
-> **Conclusão:** O **3º cenário** foi o único que permitiu ao modelo identificar a **V14** como variável de importância para identificar o tipo de transação e alcançando o equilíbrio ideal entre Recall e Precision detectada através da Macro Avg..  
+> **3º cenário** foi o único que permitiu ao modelo identificar a **V14** como variável de importância para identificar o tipo de transação e alcançando o equilíbrio ideal entre Recall e Precision detectada através da Macro Avg..  
 > Os outros cenários tinham a V17 como variável de importância.
 
 ---
@@ -79,7 +84,8 @@ Ela divide os resultados em quatro quadrantes:
 * ✅ **Verdadeiro Negativo :** = SUCESSO - Era compra normal e o modelo liberou - Canto superior esquerdo.
 * ❌ **Falso Positivo :** = ERRO - Era compra normal, mas o modelo bloqueou - Canto superior direito. 
 * ❌ **Falso Negativo :** = ERRO - Era fraude, mas o modelo deixou passar - Canto inferior esquerdo.
-
+###### Visualização dos Resultados
+![Matriz de Confusão](imagens/matriz_confusao.png)
 ---
 
 ### 🎯  Conclusão:
@@ -89,3 +95,5 @@ No 3º arquivo  consegui um resultado técnico muito próximo ao do arquivo comp
 * Cuidado, nem sempre a Acurácia de 100% define se o modelo e bom ou ruim, temos que também olhar para as outras métricas : precision, recall e macro avg.
 
 ---
+###### Análise detalhada, resultados e conclusão
+![Analise](docs/analise.md)
