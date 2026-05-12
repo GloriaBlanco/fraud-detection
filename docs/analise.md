@@ -14,7 +14,7 @@ Eu testei o modelo Random Forest com 3 tipos de dados/arquivos para ver a difere
 | **2º Reduzido** | Proporcional ao original | 9.983 | 17 | 10.000 |
 | **3º Estratégico** | Todos os casos de fraude | 9.508 | 492 | 10.000 |
 
-**Conclusão dos arquivos:** No 3º arquivo, a proporção é diferente do original.. 
+**Conclusão dos arquivos:** No 3º arquivo, a proporção é diferente do original..  
 Criei o modelo Random Forest com 80% para treino e 20% para teste nos três arquivos para ver a diferença de aprendizado.
 
 ##### 📊 1º Arquivo original
