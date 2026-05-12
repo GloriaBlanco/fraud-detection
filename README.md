@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="imagens/imagem.gif" alt="Fraud Detection" width="100%">
+  <img src="imagens/imagem.gif" alt="Top 10 Variáveis" width="300">
 </p>
 
 # 🛡️ Fraud Detection in Credit Cards | Detecção de Fraude
@@ -96,4 +96,5 @@ No 3º arquivo  consegui um resultado técnico muito próximo ao do arquivo comp
 
 ---
 ##### Análise detalhada, resultados e conclusão
-[Análise] (docs/analise.md)
+![Análise] (docs/analise.md)
+s
