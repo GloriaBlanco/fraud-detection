@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="imagens/imagem.gif" alt="Top 10 Variáveis" width="300">
+  <img src="imagens/imagem.gif" alt="Top 10 Variáveis" width="500">
 </p>
 
 # 🛡️ Fraud Detection in Credit Cards | Detecção de Fraude
@@ -85,7 +85,8 @@ Ela divide os resultados em quatro quadrantes:
 * ❌ **Falso Positivo :** = ERRO - Era compra normal, mas o modelo bloqueou - Canto superior direito. 
 * ❌ **Falso Negativo :** = ERRO - Era fraude, mas o modelo deixou passar - Canto inferior esquerdo.
 ###### Visualização dos Resultados
-![Matriz de Confusão](imagens/matriz_confusao.png)
+###### Visualização dos Resultados
+<img src="imagens/matriz_confusao.png" width="500">
 ---
 
 ### 🎯  Conclusão:
@@ -96,5 +97,4 @@ No 3º arquivo  consegui um resultado técnico muito próximo ao do arquivo comp
 
 ---
 ##### Análise detalhada, resultados e conclusão
-![Análise] (docs/analise.md)
-s
+[Análise](docs/analise.md)
