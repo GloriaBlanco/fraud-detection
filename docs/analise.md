@@ -14,7 +14,7 @@ Eu testei o modelo Random Forest com 3 tipos de dados/arquivos para ver a difere
 | **2º Reduzido** | Proporcional ao original | 9.983 | 17 | 10.000 |
 | **3º Estratégico** | Todos os casos de fraude | 9.508 | 492 | 10.000 |
 
-**Conclusão dos arquivos:** No 3º arquivo, a proporção é diferente do original. 
+**Conclusão dos arquivos:** No 3º arquivo, a proporção é diferente do original.. 
 Criei o modelo Random Forest com 80% para treino e 20% para teste nos três arquivos para ver a diferença de aprendizado.
 
 ##### 📊 1º Arquivo original
@@ -73,7 +73,7 @@ Esta tabela compara o desempenho do modelo Random Forest nos três cenários de 
 | **Total de Registros** | 284.807 | 10.000 | 10.000 |
 | **Amostra (Teste)** | 56.692 | 2.000 | 2.000 |
 | **Classe 0 (Total/Teste)** | 284.315 / 56.864 | 9.983 / 1.997 | 9.508 / 1.902 passou 19 como legitimo e eram fraude|
-| **Classe 1 (Total/Teste)** | 492 / 98 | 17 / 3 | 492 / 98 (*)* aqui igual completo |
+| **Classe 1 (Total/Teste)** | 492 / 98 | 17 / 3 | 492 / 98 (*) aqui igual completo |
 | **Porcentagem (0/1)** | 99,82% / 0,17% | 99,82% / 0,17% | **95,08% / 4,92%** |
 | **Variável Importante** | V17 | V17 | **V14** |
 | **Acerto Fraude (Recall)** | 80/98 (**81,63%**) | 3/3 (100%) | 79/98 (**80,61%**) |
