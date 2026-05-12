@@ -95,5 +95,5 @@ No 3º arquivo  consegui um resultado técnico muito próximo ao do arquivo comp
 * Cuidado, nem sempre a Acurácia de 100% define se o modelo e bom ou ruim, temos que também olhar para as outras métricas : precision, recall e macro avg.
 
 ---
-###### Análise detalhada, resultados e conclusão
-![Analise](docs/analise.md)
+##### Análise detalhada, resultados e conclusão
+[Análise] (docs/analise.md)
