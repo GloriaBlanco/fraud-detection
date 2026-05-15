@@ -2,17 +2,15 @@
   <img src="imagens/imagem.gif" alt="Top 10 Variable" width="500">
 </p>
 
-# 🛡️ Fraud Detection in Credit Cards | Detecção de Fraude em cartão de crédito
+# 🛡️ Fraud Detection in Credit Cards | *Detecção de Fraude em cartão de crédito*
 This project leverages Machine Learning to identify fraudulent transactions. 
 <br><sub>*Este projeto usa Machine Learning para identificar transações fraudulentas.*</sub>    
 
-The main focus is balancing fraud detection with a seamless customer experience.. 
-
->  *O foco principal é equilibrar a detecção de fraude com uma boa experiência para o cliente*..  
+The main focus is balancing fraud detection with a seamless customer experience.
+<br><sub>*O foco principal é equilibrar a detecção de fraude com uma boa experiência para o cliente.*</sub>  
 
 The objective is to analyze transactions: amount, time, location and classify:
-
->  *Objetivo é analisar as transações: valor, hora, local e classificar:*
+<br><sub>*Objetivo é analisar as transações: valor, hora, local e classificar:*</sub>
 
 > **✅ Legitimate / Not Fraud** *| Legítimo*  
 
@@ -20,39 +18,35 @@ The objective is to analyze transactions: amount, time, location and classify:
 
 
 **🚀 Insight:** the strategic reduction of the dataset revealed that variable **V14** is important for distinguishing the transaction type..  
+<br><sub>*🚀 Insight: A redução estratégica do dataset que revelou que a variável V14 é importante para distinguir o tipo de transação*.</sub>  
 
-> *🚀 Insight: A redução estratégica do dataset que revelou que a variável V14 é importante para distinguir o tipo de transação*..  
-
-This enabled a lightweight, fast model with high recall, without compromising precision..  
-
-> *Isso permitiu um modelo leve, rápido e com alto Recall, sem perda de precisão*..  
+This enabled a lightweight, fast model with high recall, without compromising precision.
+<br><sub>*Isso permitiu um modelo leve, rápido e com alto Recall, sem perda de precisão.*</sub>  
 
 The source file was the creditcard.csv from Kaggle.
-
-> *O arquivo base foi o creditcard.csv do Kaggle.*
+<br><sub>*O arquivo base foi o creditcard.csv do Kaggle.*</sub>
 
 ---
 
 ### 🛠️ 1. Methodology and tools | Metodologia e Ferramentas
 
-**Supervised Classification Model** *| Modelo Supervisionado de Classificação*..  
-  I performed a comparative test betweem 2 algorithms Random Forest e Logistic Regression..  
+**Supervised Classification Model** *| Modelo Supervisionado de Classificação*.
 
-> *Realizei um teste comparativo entre os 2 algoritmos Random Forest e Logistic Regression*..  
+I performed a comparative test betweem 2 algorithms Random Forest e Logistic Regression.
+<br><sub>*Realizei um teste comparativo entre os 2 algoritmos Random Forest e Logistic Regression.*</sub>  
 
-  The model **Random Forest** achieved the best performance..  
-
-> *O modelo Random Forest teve o melhor desempenho*..  
+The model **Random Forest** achieved the best performance.
+<br><sub>*O modelo Random Forest teve o melhor desempenho.*</sub>  
 
 * **Random Forest:** este  modelo mostra quais colunas foram mais importantes para decidir se a transaçao é fraude ou não.
-
-> *Random Forest: this is model shows wich features  were the most  very important for deciding wheather a transaction was fraud or not.*
+<br><sub>*Random Forest: this is model shows wich features  were the most  very important for deciding wheather a transaction was fraud or not.*</sub>
 
   * **Confusion Matrix:** essential for knowing whether the model makes more mistakes on "false positive"="blocking an honest customer" or a "false negative"= not a fraud detect. 
+  <br><sub>*Matriz de Confusão: Essencial para saber se o modelo está errando mais o "falso positivo"=bloquear um cliente honesto ou o "falso negativo" = não detectar a fraude.*</sub>
 
-  > *Matriz de Confusão: Essencial para saber se o modelo está errando mais o "falso positivo"=bloquear um cliente honesto ou o "falso negativo" = não detectar a fraude.*
-
-  * **Features/Gráfico de Importância:** Diz o **porquê**. Se a variável **V14** está no topo, sabemos que o comportamento dela é o maior **"dedo-duro"** da fraude. O modelo identifica quais colunas foram mais importantes para a decisão.
+  * **Feature Importance/Graphics:** it displays  variables in order of importance. In this project the variable **V14**  is at the top, meaning  it is the most important  variable for fraud detection.
+  <br><sub>*Importância das Variáveis/Gráfico:** mostra as variáveis por ordem de importância. Neste projeto a variável V14 está no topo, significando que ela é a variável mais importante para detectarmos uma fraude.
+  
   * **Curva Precision-Recall:** O melhor gráfico para dados desbalanceados. Diz a estabilidade; se a linha cair muito rápido, o modelo é instável para casos raros.
   * **Visualização de uma Árvore:** O Random Forest cria várias árvores. Analisei a primeira/index 0 para entender a lógica e as perguntas que o modelo faz tipo "O valor da compra é > X?"  Se sim, vá para a esquerda...".
   * **BoxPlot:** Para visualização da variável importante..  
