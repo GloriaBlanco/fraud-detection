@@ -3,9 +3,8 @@
 </p>
 
 # 🛡️ Fraud Detection in Credit Cards | Detecção de Fraude em cartão de crédito
-This project leverages Machine Learning to identify fraudulent transactions..  
-
-<br><small>*Este projeto usa Machine Learning para identificar transações fraudulentas.*</small>    
+This project leverages Machine Learning to identify fraudulent transactions. 
+<br><sub>*Este projeto usa Machine Learning para identificar transações fraudulentas.*</sub>    
 
 The main focus is balancing fraud detection with a seamless customer experience.. 
 
